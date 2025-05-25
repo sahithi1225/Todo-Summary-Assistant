@@ -15,11 +15,11 @@ app.use("/todos", todoRoutes);
 const sendSlackStartupMessage = async () => {
   try {
     await axios.post(process.env.SLACK_WEBHOOK_URL, {
-      text: "🚀 Todo Summary Assistant server is up and running!",
+      text: "Todo Summary Assistant server is up and running!",
     });
-    console.log("✅ Slack notification sent.");
+    console.log("Slack notification sent.");
   } catch (error) {
-    console.error("❌ Failed to send Slack message:", error.message);
+    console.error("Failed to send Slack message:", error.message);
   }
 };
 
